@@ -48,7 +48,7 @@ namespace AsanaNet
         public string           Notes               { get; set; }
 
         [AsanaDataAttribute     ("projects",        SerializationFlags.Optional, "ID")]
-        public AsanaProject[]   Projects            { get; private set; }
+        public AsanaProject[]   Projects            { get; set; }
 
         [AsanaDataAttribute     ("tags",            SerializationFlags.Optional, "ID")]
         public AsanaTag[]       Tags                { get; private set; }

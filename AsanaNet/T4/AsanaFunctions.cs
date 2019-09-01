@@ -16,7 +16,8 @@ namespace AsanaNet
 			GetWorkspaceById,
 			GetUsersInWorkspace,
 			GetTasksInWorkspace,
-			GetProjectsInWorkspace,
+            GetTasksInWorkspaceAnyUser,
+            GetProjectsInWorkspace,
 			GetTagsInWorkspace,
 			GetTaskById,
 			GetStoriesInTask,
@@ -127,7 +128,13 @@ namespace AsanaNet
 				return request.Go((o, h) => PackAndSendResponseCollection<AsanaTask>(o, callback), ErrorCallback);
 			}
 
-            public Task<IAsanaObjectCollection<AsanaTask>> GetTasksInWorkspaceAsync(AsanaWorkspace asanaWorkspace, AsanaUser asanaUser)
+            public Task GetTasksInWorkspace(AsanaWorkspace asanaWorkspace, AsanaCollectionResponseEventHandler callback)
+            {
+                var request = GetBaseRequest(AsanaFunction.GetFunction(Function.GetTasksInWorkspaceAnyUser), asanaWorkspace);
+                return request.Go((o, h) => PackAndSendResponseCollection<AsanaTask>(o, callback), ErrorCallback);
+            }
+
+        public Task<IAsanaObjectCollection<AsanaTask>> GetTasksInWorkspaceAsync(AsanaWorkspace asanaWorkspace, AsanaUser asanaUser)
             {
                 var request = GetBaseRequest(AsanaFunction.GetFunction(Function.GetTasksInWorkspace), asanaWorkspace, asanaUser);
                 return request.GoCollectionAsync<AsanaTask>();
@@ -554,7 +561,8 @@ namespace AsanaNet
 				Functions.Add(Function.GetWorkspaceById, new AsanaFunction("/workspaces/{0}", "GET"));
 				Functions.Add(Function.GetUsersInWorkspace, new AsanaFunction("/workspaces/{0:ID}/users", "GET"));
 				Functions.Add(Function.GetTasksInWorkspace, new AsanaFunction("/workspaces/{0:ID}/tasks?assignee={1:ID}", "GET"));
-				Functions.Add(Function.GetProjectsInWorkspace, new AsanaFunction("/workspaces/{0:ID}/projects", "GET"));
+                Functions.Add(Function.GetTasksInWorkspaceAnyUser, new AsanaFunction("/workspaces/{0:ID}/tasks", "GET"));
+                Functions.Add(Function.GetProjectsInWorkspace, new AsanaFunction("/workspaces/{0:ID}/projects", "GET"));
 				Functions.Add(Function.GetTagsInWorkspace, new AsanaFunction("/workspaces/{0:ID}/tags", "GET"));
 				Functions.Add(Function.GetTaskById, new AsanaFunction("/tasks/{0}", "GET"));
 				Functions.Add(Function.GetStoriesInTask, new AsanaFunction("/tasks/{0:ID}/stories", "GET"));

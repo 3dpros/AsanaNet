@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsanaNet", "AsanaNet\AsanaNet.csproj", "{3740ED7E-52B6-4D40-92CD-DF0FF0E855E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsanaNet.Sample", "AsanaNet.Sample\AsanaNet.Sample.csproj", "{C7DB452E-A5F5-4171-B95E-CBBB8A70EA72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsanaNet.Sample", "AsanaNet.Sample\AsanaNet.Sample.csproj", "{C7DB452E-A5F5-4171-B95E-CBBB8A70EA72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsanaWrapper", "AsanaWrapper\AsanaWrapper.csproj", "{0A3869A1-BCC9-470B-82AB-BE88155E50E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsanaWrapperTests", "AsanaWrapperTests\AsanaWrapperTests.csproj", "{88892E54-874D-44FB-9C3C-ED34CD2C96C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,8 +43,35 @@ Global
 		{C7DB452E-A5F5-4171-B95E-CBBB8A70EA72}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{C7DB452E-A5F5-4171-B95E-CBBB8A70EA72}.Release|x86.ActiveCfg = Release|Any CPU
 		{C7DB452E-A5F5-4171-B95E-CBBB8A70EA72}.Release|x86.Build.0 = Release|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Debug|x86.Build.0 = Debug|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Release|x86.ActiveCfg = Release|Any CPU
+		{0A3869A1-BCC9-470B-82AB-BE88155E50E7}.Release|x86.Build.0 = Release|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Debug|x86.Build.0 = Debug|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Release|x86.ActiveCfg = Release|Any CPU
+		{88892E54-874D-44FB-9C3C-ED34CD2C96C2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CABAF6B-B1AC-4D66-99FC-4D408DA305C4}
 	EndGlobalSection
 EndGlobal
