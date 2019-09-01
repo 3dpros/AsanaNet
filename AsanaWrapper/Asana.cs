@@ -87,14 +87,14 @@ namespace AsanaAPI
                 Name = name,
                 Notes = notes,
                 DueOn = dueDate,
-                Projects = new List<AsanaProject>() { GetProjectByName(projectNames[0]) }.ToArray()
+         //       Projects = new List<AsanaProject>() { GetProjectByName(projectNames[0]) }.ToArray()
             };
             task.Save(_asanaRef).Wait();
            // var serverTask = GetTaskByName(name);
             foreach (string proj in projectNames)
             {
-        //        var project = GetProjectByName(proj);
-         //       task.AddProject(project, _asanaRef).Wait();
+                var project = GetProjectByName(proj);
+                task.AddProject(project, _asanaRef).Wait();
             }
 
         }
