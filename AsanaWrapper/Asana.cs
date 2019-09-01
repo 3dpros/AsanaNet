@@ -87,6 +87,7 @@ namespace AsanaAPI
                 Name = name,
                 Notes = notes,
                 DueOn = dueDate,
+                //I modified Projects to have a public setter, but that didn't work since I dont think the API formats the parameter right to set the projects at task creation, but I am not sure
          //       Projects = new List<AsanaProject>() { GetProjectByName(projectNames[0]) }.ToArray()
             };
             task.Save(_asanaRef).Wait();
@@ -94,6 +95,7 @@ namespace AsanaAPI
             foreach (string proj in projectNames)
             {
                 var project = GetProjectByName(proj);
+                //this fails assumedly because the task ID is still 0.  The API should be updating it when the task is saved but isn't
                 task.AddProject(project, _asanaRef).Wait();
             }
 
